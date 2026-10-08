@@ -1,4 +1,4 @@
-package com.anantmittal.cartbridge.app
+package com.anantmittal.bridge.app
 
 import kotlinx.serialization.Serializable
 

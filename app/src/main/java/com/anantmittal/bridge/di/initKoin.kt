@@ -1,4 +1,4 @@
-package com.anantmittal.cartbridge.di
+package com.anantmittal.bridge.di
 
 import android.content.Context
 import org.koin.android.ext.koin.androidContext

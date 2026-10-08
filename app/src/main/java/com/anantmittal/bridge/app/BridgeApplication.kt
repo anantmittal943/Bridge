@@ -1,8 +1,8 @@
-package com.anantmittal.cartbridge.app
+package com.anantmittal.bridge.app
 
 import android.app.Application
-import com.anantmittal.cartbridge.BuildConfig
-import com.anantmittal.cartbridge.di.initKoin
+import com.anantmittal.bridge.BuildConfig
+import com.anantmittal.bridge.di.initKoin
 import com.google.firebase.FirebaseApp
 import com.google.firebase.appcheck.FirebaseAppCheck
 import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory
@@ -10,7 +10,7 @@ import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderF
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 
-class CartBridgeApplication : Application() {
+class BridgeApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initKoin(this)

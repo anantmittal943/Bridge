@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CartBridge"
+rootProject.name = "Bridge"
 include(":app")

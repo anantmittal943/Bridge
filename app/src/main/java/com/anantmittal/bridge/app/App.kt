@@ -1,6 +1,5 @@
-package com.anantmittal.cartbridge.app
+package com.anantmittal.bridge.app
 
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -13,8 +12,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import com.anantmittal.cartbridge.presentation.home_screen.HomeScreenRoot
-import com.anantmittal.cartbridge.presentation.home_screen.HomeViewModel
+import com.anantmittal.bridge.presentation.home_screen.HomeScreenRoot
+import com.anantmittal.bridge.presentation.home_screen.HomeViewModel
+import com.anantmittal.bridge.presentation.theme.BridgeTheme
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -22,7 +22,7 @@ fun App() {
 
     val navController = rememberNavController()
 
-    MaterialTheme {
+    BridgeTheme {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentGraphRoute = navBackStackEntry?.destination?.parent?.route
 

@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.anantmittal.cartbridge"
+    namespace = "com.anantmittal.bridge"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.anantmittal.cartbridge"
+        applicationId = "com.anantmittal.bridge"
         minSdk = 26
         targetSdk = 37
         versionCode = 2
