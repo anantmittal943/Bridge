@@ -160,7 +160,12 @@ private fun ReminderItem(
             Switch(
                 checked = reminder.isEnabled,
                 onCheckedChange = onToggle,
-                colors = SwitchDefaults.colors(checkedThumbColor = MaterialTheme.colorScheme.primary)
+                colors = SwitchDefaults.colors(
+                    checkedThumbColor = MaterialTheme.colorScheme.surface,
+                    checkedTrackColor = MaterialTheme.colorScheme.primary,
+                    uncheckedThumbColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                    uncheckedTrackColor = MaterialTheme.colorScheme.surfaceVariant
+                )
             )
             IconButton(onClick = onDelete) {
                 Icon(
@@ -183,6 +188,9 @@ private fun AddReminderDialog(
     AlertDialog(
         onDismissRequest = { onAction(HomeAction.OnDismissDialog) },
         title = { Text("New Reminder") },
+        containerColor = MaterialTheme.colorScheme.surface,
+        titleContentColor = MaterialTheme.colorScheme.onSurface,
+        textContentColor = MaterialTheme.colorScheme.onSurface,
         text = {
             Column {
                 OutlinedTextField(
@@ -218,13 +226,22 @@ private fun AddReminderDialog(
         confirmButton = {
             Button(
                 onClick = { onAction(HomeAction.OnSaveReminder) },
-                enabled = state.newReminderTitle.isNotBlank()
+                enabled = state.newReminderTitle.isNotBlank(),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
+                )
             ) {
                 Text("Save")
             }
         },
         dismissButton = {
-            TextButton(onClick = { onAction(HomeAction.OnDismissDialog) }) {
+            TextButton(
+                onClick = { onAction(HomeAction.OnDismissDialog) },
+                colors = ButtonDefaults.textButtonColors(
+                    contentColor = MaterialTheme.colorScheme.primary
+                )
+            ) {
                 Text("Cancel")
             }
         }
